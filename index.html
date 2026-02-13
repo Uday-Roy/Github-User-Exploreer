@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitExplore | Modern GitHub Profile Viewer</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Fonts: Inter & Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo"><i class="fab fa-github"></i> GitExplore</div>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#explorer">Explorer</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Discover GitHub Profiles Instantly</h1>
+        <p>
+          Enter any username and explore their repositories, bio, and more.
+          Simple, fast, and elegant.
+        </p>
+        <a href="#explorer" class="btn btn-primary">Try It Now</a>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <div class="container">
+        <h2 class="section-title">Why Use GitExplore?</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <i class="fas fa-search feature-icon"></i>
+            <h3>Quick Search</h3>
+            <p>
+              Just type a GitHub username and get instant results with profile
+              details.
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-code-branch feature-icon"></i>
+            <h3>Latest Repos</h3>
+            <p>
+              View the most recently updated repositories with stats like stars
+              and forks.
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-mobile-alt feature-icon"></i>
+            <h3>Fully Responsive</h3>
+            <p>Works perfectly on all devices – from desktop to mobile.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GitHub Explorer Section -->
+    <section id="explorer" class="explorer">
+      <div class="container">
+        <h2 class="section-title">GitHub User Explorer</h2>
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="e.g., octocat" />
+          <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
+        </div>
+        <!-- Loading Spinner -->
+        <div class="loading" id="loading">Loading...</div>
+        <!-- Error Message -->
+        <div class="error" id="error"></div>
+        <!-- User Profile Card -->
+        <div class="user-card" id="userCard" style="display: none"></div>
+        <!-- Repositories Section -->
+        <div class="repos" id="repos" style="display: none">
+          <h3>Latest Repositories</h3>
+          <div id="repoList"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section with Location -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-wrapper">
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <input type="text" id="name" placeholder="Your Name" required />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  rows="5"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+          <div class="contact-info">
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>123 Tech Street, Silicon Valley, CA</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone-alt"></i>
+              <p>+1 (555) 123-4567</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <p>hello@gitexplore.dev</p>
+            </div>
+            <!-- Simple map placeholder (can be replaced with iframe later) -->
+            <div class="map-placeholder">
+              <i class="fas fa-map"></i> Interactive map coming soon
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Column 1: Logo & Description -->
+          <div class="footer-col">
+            <div class="footer-logo">
+              <i class="fab fa-github"></i> GitExplore
+            </div>
+            <p class="footer-description">
+              Discover GitHub profiles instantly. Built with modern web
+              technologies for developers and recruiters.
+            </p>
+          </div>
+
+          <!-- Column 2: Quick Links (the ones you requested) -->
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#explorer">Explorer</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact Info -->
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <ul class="footer-contact">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 123 Tech Street, Silicon
+                Valley, CA
+              </li>
+              <li><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</li>
+              <li><i class="fas fa-envelope"></i> hello@gitexplore.dev</li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Social Media & Newsletter -->
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+            <div class="newsletter">
+              <h4>Newsletter</h4>
+              <form class="newsletter-form">
+                <input type="email" placeholder="Your email" required />
+                <button type="submit">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 GitExplore. All rights reserved. |
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
